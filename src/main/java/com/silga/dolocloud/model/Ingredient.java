@@ -11,6 +11,6 @@ public class Ingredient {
     private Type type;
 
     public enum Type{
-        ALCOHOLIC, NON_ALCOHOLIC, SUGAR
+        ALCOHOLIC, NON_ALCOHOLIC, SUGAR, SOUR
     }
 }
