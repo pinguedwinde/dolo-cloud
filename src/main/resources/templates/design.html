@@ -5,10 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Dolo Cloud</title>
-    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
 </head>
 <body>
-    <h1>Design your taco!</h1>
+    <h1>Design your dolo!</h1>
     <img th:src="@{/images/DoloCloud.jpeg}"/>
     <form method="POST" th:object="${dolo}">
         <div class="grid">
@@ -48,7 +48,7 @@
           <h3>Name your dolo creation:</h3>
           <input type="text" th:field="*{name}"/>
           <br/>
-          <button>Submit Your Taco</button>
+          <button>Submit Your Dolo</button>
 
         </div>
     </form>
