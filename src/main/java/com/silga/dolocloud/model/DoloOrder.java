@@ -6,11 +6,15 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
-public class DoloOrder {
+public class DoloOrder implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private String id;
 
     @NotBlank(message="Delivery name is required")
     private String deliveryName;
@@ -38,8 +42,10 @@ public class DoloOrder {
     private String ccCVV;
 
     private List<Dolo> dolos = new ArrayList<>();
+    private Date placedAt;
 
     public void addTaco(Dolo dolo) {
         this.dolos.add(dolo);
     }
+
 }
