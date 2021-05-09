@@ -3,3 +3,7 @@ body{
     padding-bottom: 10%;
     padding-left: 40%;
 }
+
+.validationError{
+    color: red;
+}

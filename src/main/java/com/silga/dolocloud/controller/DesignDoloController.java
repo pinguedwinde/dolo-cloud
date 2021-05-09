@@ -5,9 +5,10 @@ import com.silga.dolocloud.model.Ingredient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -49,7 +50,10 @@ public class DesignDoloController {
     }
 
     @PostMapping
-    public String processDolo(Dolo dolo){
+    public String processDolo(@Valid @ModelAttribute("dolo") Dolo dolo, Errors errors){
+        if (errors.hasErrors()) {
+            return "design";
+        }
         log.info("Processing dolo: " + dolo);
         return "redirect:/orders/current";
     }

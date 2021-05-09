@@ -47,6 +47,9 @@
 
           <h3>Name your dolo creation:</h3>
           <input type="text" th:field="*{name}"/>
+          <span class="validationError"
+                  th:if="${#fields.hasErrors('name')}"
+                  th:errors="*{name}">Dolo name Error</span>
           <br/>
           <button>Submit Your Dolo</button>
 
