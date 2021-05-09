@@ -2,39 +2,35 @@ package com.silga.dolocloud.controller;
 
 import com.silga.dolocloud.model.Dolo;
 import com.silga.dolocloud.model.Ingredient;
+import com.silga.dolocloud.repository.IngredientRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
 @Slf4j
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("doloOrder")
 public class DesignDoloController {
 
+    private final IngredientRepository ingredientRepository;
+
+    @Autowired
+    public DesignDoloController(IngredientRepository ingredientRepository) {
+        this.ingredientRepository = ingredientRepository;
+    }
+
     @ModelAttribute
     public void addIngredientsToModel(Model model){
-        List<Ingredient> ingredients = Arrays.asList(
-                new Ingredient("RAMI", "Raan Miisga", Ingredient.Type.SOUR),
-                new Ingredient("RMPA", "Raan Miisg Paale", Ingredient.Type.SOUR),
-                new Ingredient("RMMA", "Raan Miisg Maasga", Ingredient.Type.SOUR),
-                new Ingredient("RANO", "Raan Noodo", Ingredient.Type.SUGAR),
-                new Ingredient("RNPA", "Raan Nood Paale", Ingredient.Type.SUGAR),
-                new Ingredient("RNMA", "Raan Nood Maasga", Ingredient.Type.SUGAR),
-                new Ingredient("RATO", "Raan Toodo", Ingredient.Type.ALCOHOLIC),
-                new Ingredient("RTPA", "Raan Tood Paale", Ingredient.Type.ALCOHOLIC),
-                new Ingredient("RTMA", "Raan Tood Maasga", Ingredient.Type.ALCOHOLIC),
-                new Ingredient("RAKO", "Raan Koom", Ingredient.Type.NON_ALCOHOLIC),
-                new Ingredient("RKPA", "Raan Koom Paale", Ingredient.Type.NON_ALCOHOLIC),
-                new Ingredient("RKMA", "Raan Koom Maasga", Ingredient.Type.NON_ALCOHOLIC)
-        );
+        Iterable<Ingredient> ingredients = ingredientRepository.findAll();
         Ingredient.Type[] types = Ingredient.Type.values();
         for(Ingredient.Type type : types){
             model.addAttribute(
@@ -58,8 +54,9 @@ public class DesignDoloController {
         return "redirect:/orders/current";
     }
 
-    private Iterable<Ingredient> filterByType(List<Ingredient> ingredients, Ingredient.Type type){
-        return ingredients.stream()
+    private Iterable<Ingredient> filterByType(Iterable<Ingredient> ingredients, Ingredient.Type type){
+
+        return StreamSupport.stream(ingredients.spliterator(), false)
                 .filter(ingredient -> ingredient.getType().equals(type))
                 .collect(Collectors.toList());
     }
