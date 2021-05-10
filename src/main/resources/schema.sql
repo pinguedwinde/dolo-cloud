@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS dolo_orders (
     delivery_name VARCHAR(50) NOT NULL,
     delivery_street VARCHAR(50) NOT NULL,
     delivery_city VARCHAR(50) NOT NULL,
-    delivery_state VARCHAR(2) NOT NULL,
+    delivery_state VARCHAR(30) NOT NULL,
     delivery_zip VARCHAR(10) NOT NULL,
     cc_number VARCHAR(16) NOT NULL,
     cc_expiration VARCHAR(5) NOT NULL,
