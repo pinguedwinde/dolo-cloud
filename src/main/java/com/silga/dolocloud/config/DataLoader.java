@@ -7,6 +7,7 @@ import com.silga.dolocloud.repository.UserRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,11 +35,11 @@ public class DataLoader {
     }
 
     @Bean
-    public ApplicationRunner loadUsers(UserRepository userRepository){
+    public ApplicationRunner loadUsers(UserRepository userRepository, PasswordEncoder passwordEncoder){
         List<User> users = Arrays.asList(
-                new User("tiga", "pass", "Tiga Bila", "12 avenue Tang zuugu",
+                new User("tiga", passwordEncoder.encode("pass"), "Tiga Bila", "12 avenue Tang zuugu",
                         "Tang Pooré", "Burkina Faso", "23455","01 23 43 55"),
-                new User("Poko", "pass", "Poko Koudbila", "2 rue Bankin",
+                new User("Poko", passwordEncoder.encode("pass"), "Poko Koudbila", "2 rue Bankin",
                         "Tang Pooré", "Burkina Faso", "23455","01 00 43 95")
         );
         return args -> userRepository.saveAll(users);

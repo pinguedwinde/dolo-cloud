@@ -40,14 +40,19 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeRequests()
-                    .antMatchers("/design", "/orders").access("hasRole('USER')")
-                    .antMatchers("/", "/**").access("permitAll()")
+                    .mvcMatchers("/design", "/orders").hasRole("USER")
+                    .anyRequest().permitAll()
                 .and()
                     .formLogin()
                         .loginPage("/login")
                 .and()
                     .oauth2Login()
                         .loginPage("/login")
+                .and()
+                    .logout()
+                        .logoutSuccessUrl("/")
+                .and()
+                    .csrf()
                 .and()
                 .build();
     }
