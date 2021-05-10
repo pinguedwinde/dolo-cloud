@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS dolos (
     dolo_order_key BIGINT NOT NULL,
     created_at TIMESTAMP NOT NULL
 );
-CREATE TABLE IF NOT EXISTS ingredients_ref (
+CREATE TABLE IF NOT EXISTS ingredient_refs (
     ingredient VARCHAR(4) NOT NULL,
     dolo BIGINT NOT NULL,
     dolo_key BIGINT NOT NULL
@@ -29,5 +29,5 @@ CREATE TABLE IF NOT EXISTS ingredients (
 );
 alter TABLE dolos
     add foreign key (dolo_order) references dolo_orders(id);
-alter TABLE ingredients_ref
+alter TABLE ingredient_refs
     add foreign key (ingredient) references ingredients(id);

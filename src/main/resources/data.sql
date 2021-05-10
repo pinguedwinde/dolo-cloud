@@ -1,4 +1,4 @@
-DELETE FROM ingredients_ref;
+DELETE FROM ingredient_refs;
 DELETE FROM dolos;
 DELETE FROM dolo_orders;
 DELETE FROM ingredients;

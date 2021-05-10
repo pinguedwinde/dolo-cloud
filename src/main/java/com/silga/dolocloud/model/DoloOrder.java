@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 public class DoloOrder implements Serializable {
     private static final long serialVersionUID = 1L;
-    private String id;
+    private Long id;
 
     @NotBlank(message="Delivery name is required")
     private String deliveryName;
