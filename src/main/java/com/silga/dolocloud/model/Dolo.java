@@ -1,19 +1,18 @@
 package com.silga.dolocloud.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
 @Data
-@Table("dolos")
+@Table(name = "dolos")
 public class Dolo {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotNull
@@ -22,8 +21,22 @@ public class Dolo {
 
     @NotNull
     @Size(min=1, message="You must choose at least 1 ingredient")
+    @ManyToMany
     private List<Ingredient> ingredients;
 
-    @Column("created_at")
+    @Column(name = "created_at")
     private Date createdAt;
+
+    @PrePersist
+    private void createAt(){
+        this.createdAt = new Date();
+    }
+
+    public void addIngredient(Ingredient ingredient){
+        this.ingredients.add(ingredient);
+    }
+
+    public List<Ingredient> getCopyOfIngredients(){
+        return List.copyOf(ingredients);
+    }
 }
