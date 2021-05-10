@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  mongodb:
+    image: cassandra:latest
+    hostname: my-cassandra
+    ports:
+      - 9042:9042
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - cassandra-dolo-cloud-data:/data/db
+volumes:
+  mongo-data:
+    driver: local
