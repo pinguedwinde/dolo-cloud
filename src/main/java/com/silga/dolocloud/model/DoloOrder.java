@@ -1,6 +1,9 @@
 package com.silga.dolocloud.model;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.persistence.*;
@@ -13,7 +16,10 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Entity
 @Table(name = "dolo_orders")
+@AllArgsConstructor
+@NoArgsConstructor(access= AccessLevel.PUBLIC, force=true)
 public class DoloOrder implements Serializable {
     private static final long serialVersionUID = 1L;
 

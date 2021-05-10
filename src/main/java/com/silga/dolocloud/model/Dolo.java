@@ -1,6 +1,9 @@
 package com.silga.dolocloud.model;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -9,7 +12,10 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Entity
 @Table(name = "dolos")
+@AllArgsConstructor
+@NoArgsConstructor(access= AccessLevel.PUBLIC, force=true)
 public class Dolo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
