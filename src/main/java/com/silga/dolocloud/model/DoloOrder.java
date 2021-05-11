@@ -66,6 +66,9 @@ public class DoloOrder implements Serializable {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Dolo> dolos = new ArrayList<>();
 
+    @ManyToOne
+    private User user;
+
     @PrePersist
     private void placeAt(){
         this.placedAt = new Date();
