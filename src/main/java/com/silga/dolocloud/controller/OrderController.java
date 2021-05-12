@@ -1,6 +1,7 @@
 package com.silga.dolocloud.controller;
 
 import com.silga.dolocloud.model.DoloOrder;
+import com.silga.dolocloud.model.OrderProperties;
 import com.silga.dolocloud.model.User;
 import com.silga.dolocloud.repository.OrderRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -24,15 +25,15 @@ import javax.validation.Valid;
 @Controller
 @SessionAttributes("order")
 @RequestMapping("orders")
-@ConfigurationProperties(prefix = "dolo.orders")
 public class OrderController {
 
     private final OrderRepository orderRepository;
-    private int pageSize = 20;
+    private final OrderProperties orderProps;
 
     @Autowired
-    public OrderController(OrderRepository orderRepository) {
+    public OrderController(OrderRepository orderRepository, OrderProperties orderProps) {
         this.orderRepository = orderRepository;
+        this.orderProps = orderProps;
     }
 
     @GetMapping("current")
@@ -43,7 +44,7 @@ public class OrderController {
 
     @GetMapping
     public String ordersForUser( @AuthenticationPrincipal User user, Model model) {
-        Pageable pageable = PageRequest.of(0, pageSize);
+        Pageable pageable = PageRequest.of(0, orderProps.getPageSize());
         model.addAttribute("orders", orderRepository.findByUserOrderByPlacedAtDesc(user,pageable));
         return "orderList";
     }

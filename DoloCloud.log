@@ -3036,3 +3036,620 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 2021-05-12 09:49:58.040  INFO 83326 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-05-12 09:50:26.609  INFO 83326 --- [http-nio-8090-exec-8] c.s.d.controller.DesignDoloController    : Processing dolo: Dolo(id=null, name=Maam raam, ingredients=[Ingredient(id=RAMI, name=Raan Miisga, type=SOUR)], createdAt=null)
 2021-05-12 09:50:47.555  INFO 83326 --- [http-nio-8090-exec-1] c.s.d.controller.OrderController         : DoloOrder submitted: DoloOrder(id=3, deliveryName=Pinguedwindé Fabrice SILGA, deliveryStreet=13 Rue Basly, Appartement 313, deliveryCity=Gennevilliers, deliveryState=France, deliveryZip=92230, ccNumber=4916810215883387, ccExpiration=02/12, ccCVV=123, placedAt=Wed May 12 09:50:47 CEST 2021, dolos=[], user=User(id=1, username=tiga, password=$2a$10$urcezE047YjAac.M7aizFusg/azqRGck4vS4ygjscM/9dSgk1ZbWC, fullname=Tiga Bila, street=12 avenue Tang zuugu, city=Tang Pooré, state=Burkina Faso, zip=23455, phoneNumber=01 23 43 55))
+2021-05-12 10:00:07.894  WARN 83326 --- [dolocloud housekeeper] com.zaxxer.hikari.pool.HikariPool        : dolocloud - Thread starvation or clock leap detected (housekeeper delta=58s828ms).
+2021-05-12 10:17:24.822  INFO 83326 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:17:24.824  INFO 83326 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:17:24.824  INFO 83326 --- [Thread-8] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:17:25.030  WARN 83326 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:17:25.031  INFO 83326 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:17:25.032  INFO 83326 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:17:25.147  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:17:25.148  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:17:25.265  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:17:25.274  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:17:25.353  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:17:25.353  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:17:25.353  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:17:25.363  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:17:25.363  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 213 ms
+2021-05-12 10:17:25.375  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:17:25.377  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:17:25.383  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:17:25.399  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:17:25.407  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:17:25.411  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:17:25.479  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:17:25.480  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:17:25.756  WARN 83326 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-12 10:17:25.809  INFO 83326 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@302891fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@62e2d220, org.springframework.security.web.header.HeaderWriterFilter@1394a79a, org.springframework.security.web.csrf.CsrfFilter@21e3f424, org.springframework.security.web.authentication.logout.LogoutFilter@3594386, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1bed2a53, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3b035ee4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a207aae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f8a16a5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5994c4b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@964685f, org.springframework.security.web.session.SessionManagementFilter@5c9e5f43, org.springframework.security.web.access.ExceptionTranslationFilter@5d0a1de4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28e47892]
+2021-05-12 10:17:25.819  INFO 83326 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:17:25.862  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2021-05-12 10:17:25.866  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Started DoloCloudApplication in 0.791 seconds (JVM running for 1685.359)
+2021-05-12 10:17:25.879  INFO 83326 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-12 10:19:56.524  INFO 83326 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:19:56.525  INFO 83326 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:19:56.525  INFO 83326 --- [Thread-14] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:19:56.728  WARN 83326 --- [Thread-14] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:19:56.729  INFO 83326 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:19:56.729  INFO 83326 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:19:56.799  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:19:56.799  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:19:56.925  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:19:56.936  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:19:57.019  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:19:57.020  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:19:57.020  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:19:57.029  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:19:57.030  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 230 ms
+2021-05-12 10:19:57.042  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:19:57.043  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:19:57.049  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:19:57.066  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:19:57.074  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:19:57.078  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:19:57.144  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:19:57.144  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:19:57.203  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:19:57.203  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:19:57.203  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:19:57.409  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:19:57.409  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:19:57.410  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:19:57.411  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:19:57.419  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:19:57.433 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:21:13.470  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:21:13.470  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:21:13.641  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:21:13.650  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:21:13.742  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:21:13.743  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:21:13.743  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:21:13.754  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:21:13.754  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 282 ms
+2021-05-12 10:21:13.769  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:21:13.770  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:21:13.776  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:21:13.792  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:21:13.801  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:21:13.808  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:21:13.866  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:21:13.866  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:14.150  WARN 83326 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-12 10:21:14.206  INFO 83326 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21e48ef6, org.springframework.security.web.context.SecurityContextPersistenceFilter@59ac98b2, org.springframework.security.web.header.HeaderWriterFilter@61b8b130, org.springframework.security.web.csrf.CsrfFilter@7b3fcd27, org.springframework.security.web.authentication.logout.LogoutFilter@4a28b3ca, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@10c96653, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4847f01, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@649b3441, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7634e8ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5221f66c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ce09fb7, org.springframework.security.web.session.SessionManagementFilter@5c7f20ef, org.springframework.security.web.access.ExceptionTranslationFilter@d544c60, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38a3bcc3]
+2021-05-12 10:21:14.216  INFO 83326 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:21:14.272  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2021-05-12 10:21:14.276  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Started DoloCloudApplication in 0.835 seconds (JVM running for 1913.778)
+2021-05-12 10:21:14.289  INFO 83326 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-12 10:21:15.681  INFO 83326 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:21:15.682  INFO 83326 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:15.682  INFO 83326 --- [Thread-19] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:21:15.889  WARN 83326 --- [Thread-19] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:21:15.890  INFO 83326 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:21:15.891  INFO 83326 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:21:15.951  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:21:15.951  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:21:16.060  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:21:16.067  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:21:16.143  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:21:16.143  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:21:16.144  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:21:16.153  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:21:16.153  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 200 ms
+2021-05-12 10:21:16.164  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:21:16.165  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:21:16.170  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:21:16.185  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:21:16.193  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:21:16.197  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:21:16.254  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:21:16.254  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:16.523  WARN 83326 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-12 10:21:16.574  INFO 83326 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b22a267, org.springframework.security.web.context.SecurityContextPersistenceFilter@33cffa1e, org.springframework.security.web.header.HeaderWriterFilter@36c24e2c, org.springframework.security.web.csrf.CsrfFilter@5de4a534, org.springframework.security.web.authentication.logout.LogoutFilter@64df6852, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@137b50ac, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4fef0636, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@bfa82f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16217abc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32b6f57a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24104af8, org.springframework.security.web.session.SessionManagementFilter@4b7a3b40, org.springframework.security.web.access.ExceptionTranslationFilter@3ea37d16, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@605a8468]
+2021-05-12 10:21:16.583  INFO 83326 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:21:16.635  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2021-05-12 10:21:16.639  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Started DoloCloudApplication in 0.705 seconds (JVM running for 1916.141)
+2021-05-12 10:21:16.649  INFO 83326 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-12 10:21:20.071  INFO 83326 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:21:20.072  INFO 83326 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:20.072  INFO 83326 --- [Thread-27] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:21:20.275  WARN 83326 --- [Thread-27] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:21:20.275  INFO 83326 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:21:20.276  INFO 83326 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:21:20.342  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:21:20.342  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:21:20.464  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:21:20.472  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:21:20.551  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:21:20.552  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:21:20.552  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:21:20.562  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:21:20.562  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 218 ms
+2021-05-12 10:21:20.573  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:21:20.574  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:21:20.579  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:21:20.594  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:21:20.603  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:21:20.606  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:21:20.661  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:21:20.661  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:20.908  WARN 83326 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-12 10:21:20.959  INFO 83326 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bfebf28, org.springframework.security.web.context.SecurityContextPersistenceFilter@32ec5827, org.springframework.security.web.header.HeaderWriterFilter@70c474c4, org.springframework.security.web.csrf.CsrfFilter@3a19c6bb, org.springframework.security.web.authentication.logout.LogoutFilter@4a4202c5, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@a32b544, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5d191f7c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@75a03366, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ccd0435, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f7c373c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f318632, org.springframework.security.web.session.SessionManagementFilter@46346244, org.springframework.security.web.access.ExceptionTranslationFilter@f9225ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4522627d]
+2021-05-12 10:21:20.967  INFO 83326 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:21:21.022  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2021-05-12 10:21:21.026  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Started DoloCloudApplication in 0.704 seconds (JVM running for 1920.528)
+2021-05-12 10:21:21.036  INFO 83326 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-12 10:21:40.559  INFO 83326 --- [Thread-32] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:21:40.560  INFO 83326 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:40.560  INFO 83326 --- [Thread-32] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:21:40.763  WARN 83326 --- [Thread-32] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:21:40.764  INFO 83326 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:21:40.765  INFO 83326 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:21:40.831  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:21:40.831  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:21:40.943  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:21:40.950  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:21:41.038  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:21:41.039  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:21:41.039  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:21:41.049  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:21:41.050  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 218 ms
+2021-05-12 10:21:41.063  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:21:41.064  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:21:41.069  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:21:41.085  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:21:41.094  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:21:41.097  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:21:41.154  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:21:41.154  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:41.205  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:21:41.206  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:21:41.206  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:21:41.408  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:21:41.409  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:21:41.410  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:21:41.411  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:21:41.417  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:21:41.419 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:22:08.032  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:22:08.033  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:22:08.151  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:22:08.158  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:22:08.242  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:22:08.243  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:22:08.243  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:22:08.253  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:22:08.253  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 219 ms
+2021-05-12 10:22:08.266  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:22:08.267  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:22:08.271  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:22:08.287  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:22:08.298  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:22:08.302  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:22:08.348  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:22:08.349  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:22:08.393  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:22:08.393  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:22:08.393  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:22:08.595  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:22:08.595  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:22:08.596  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:22:08.596  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:22:08.601  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:22:08.603 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:22:10.041  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:22:10.041  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:22:10.157  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:22:10.165  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:22:10.244  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:22:10.244  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:22:10.244  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:22:10.255  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:22:10.255  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 213 ms
+2021-05-12 10:22:10.266  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:22:10.267  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:22:10.271  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:22:10.286  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:22:10.294  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:22:10.298  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:22:10.339  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:22:10.339  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:22:10.383  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:22:10.383  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:22:10.383  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:22:10.585  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:22:10.585  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:22:10.586  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:22:10.586  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:22:10.593  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:22:10.595 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:24:24.046  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:24:24.047  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:24:24.173  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:24:24.182  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:24:24.261  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:24:24.261  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:24:24.261  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:24:24.271  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:24:24.271  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 223 ms
+2021-05-12 10:24:24.283  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:24:24.284  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:24:24.288  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:24:24.302  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:24:24.311  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:24:24.314  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:24:24.361  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:24:24.362  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:24:24.406  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:24:24.406  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:24:24.406  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:24:24.612  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:24:24.613  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:24:24.614  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:24:24.614  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:24:24.621  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:24:24.623 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:25:28.590  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:25:28.591  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:25:28.742  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:25:28.752  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:25:28.850  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:25:28.851  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:25:28.851  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:25:28.863  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:25:28.863  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 271 ms
+2021-05-12 10:25:28.878  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:25:28.879  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:25:28.884  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:25:28.902  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:25:28.918  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:25:28.923  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:25:28.981  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:25:28.981  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:25:29.028  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:25:29.029  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:25:29.029  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:25:29.235  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:25:29.235  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:25:29.236  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:25:29.236  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:25:29.241  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:25:29.243 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:26:53.326  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:26:53.327  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:26:53.460  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:26:53.470  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:26:53.564  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:26:53.564  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:26:53.564  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:26:53.578  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:26:53.578  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 250 ms
+2021-05-12 10:26:53.592  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:26:53.593  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:26:53.597  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:26:53.614  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:26:53.623  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:26:53.626  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:26:53.687  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:26:53.687  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:26:53.739  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:26:53.740  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:26:53.740  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:26:53.943  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:26:53.944  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:26:53.944  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:26:53.944  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:26:53.949  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:26:53.951 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:26:58.402  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83326 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:26:58.402  INFO 83326 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:26:58.516  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:26:58.523  INFO 83326 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:26:58.598  INFO 83326 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:26:58.599  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:26:58.599  INFO 83326 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:26:58.609  INFO 83326 --- [restartedMain] o.a.c.c.C.[Tomcat-7].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:26:58.609  INFO 83326 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 205 ms
+2021-05-12 10:26:58.620  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:26:58.621  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:26:58.624  INFO 83326 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:26:58.639  INFO 83326 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:26:58.647  INFO 83326 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:26:58.650  INFO 83326 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:26:58.689  INFO 83326 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:26:58.689  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:26:58.728  WARN 83326 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:26:58.728  INFO 83326 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:26:58.729  INFO 83326 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:26:58.935  WARN 83326 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:26:58.935  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:26:58.936  INFO 83326 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:26:58.937  INFO 83326 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:26:58.944  INFO 83326 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:26:58.946 ERROR 83326 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:31:03.116  INFO 83990 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 83990 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:31:03.118  INFO 83990 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:31:03.158  INFO 83990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-12 10:31:03.158  INFO 83990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-12 10:31:03.718  INFO 83990 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:31:03.757  INFO 83990 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:31:04.177  INFO 83990 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:31:04.183  INFO 83990 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:31:04.183  INFO 83990 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:31:04.247  INFO 83990 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:31:04.247  INFO 83990 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1088 ms
+2021-05-12 10:31:04.281  INFO 83990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:31:04.354  INFO 83990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:31:04.408  INFO 83990 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:31:04.479  INFO 83990 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:31:04.522  INFO 83990 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:31:04.551  INFO 83990 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-12 10:31:04.624  INFO 83990 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-12 10:31:04.717  INFO 83990 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:31:05.237  INFO 83990 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:31:05.243  INFO 83990 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:31:05.479  WARN 83990 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:31:05.480  INFO 83990 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:31:05.480  INFO 83990 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:31:05.695  WARN 83990 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:31:05.696  INFO 83990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:31:05.698  INFO 83990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:31:05.700  INFO 83990 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:31:05.712  INFO 83990 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:31:05.722 ERROR 83990 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:32:01.548  INFO 84009 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 84009 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:32:01.550  INFO 84009 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:32:01.595  INFO 84009 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-12 10:32:01.595  INFO 84009 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-12 10:32:02.132  INFO 84009 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:32:02.170  INFO 84009 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:32:02.586  INFO 84009 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:32:02.591  INFO 84009 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:32:02.592  INFO 84009 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:32:02.651  INFO 84009 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:32:02.651  INFO 84009 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1055 ms
+2021-05-12 10:32:02.685  INFO 84009 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:32:02.755  INFO 84009 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:32:02.804  INFO 84009 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:32:02.875  INFO 84009 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:32:02.915  INFO 84009 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:32:02.942  INFO 84009 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-12 10:32:03.008  INFO 84009 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-12 10:32:03.085  INFO 84009 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:32:03.543  INFO 84009 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:32:03.549  INFO 84009 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:32:03.756  WARN 84009 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes/com/silga/dolocloud/controller/OrderController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'orderProperties': Could not bind properties to 'OrderProperties' : prefix=dolo.orders, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'dolo.orders.page-size' to int
+2021-05-12 10:32:03.757  INFO 84009 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:32:03.757  INFO 84009 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-12 10:32:03.972  WARN 84009 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-12 10:32:03.973  INFO 84009 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown initiated...
+2021-05-12 10:32:03.975  INFO 84009 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Shutdown completed.
+2021-05-12 10:32:03.976  INFO 84009 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-12 10:32:03.988  INFO 84009 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-12 10:32:03.998 ERROR 84009 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'dolo.orders.page-size' to int:
+
+    Property: dolo.orders.page-size
+    Value: 10;
+    Origin: class path resource [application.properties] - 5:22
+    Reason: failed to convert java.lang.String to @javax.validation.constraints.Min @javax.validation.constraints.Max int
+
+Action:
+
+Update your application's configuration
+
+2021-05-12 10:32:34.023  INFO 84019 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Starting DoloCloudApplication using Java 16.0.1 on SILGAs-MBP.localdomain with PID 84019 (/Users/pinguedwinde/Projects/Web/dolo-cloud/target/classes started by pinguedwinde in /Users/pinguedwinde/Projects/Web/dolo-cloud)
+2021-05-12 10:32:34.025  INFO 84019 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : No active profile set, falling back to default profiles: default
+2021-05-12 10:32:34.070  INFO 84019 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-12 10:32:34.070  INFO 84019 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-12 10:32:34.625  INFO 84019 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 10:32:34.663  INFO 84019 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2021-05-12 10:32:35.078  INFO 84019 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-05-12 10:32:35.083  INFO 84019 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 10:32:35.084  INFO 84019 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 10:32:35.144  INFO 84019 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-12 10:32:35.144  INFO 84019 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
+2021-05-12 10:32:35.177  INFO 84019 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Starting...
+2021-05-12 10:32:35.247  INFO 84019 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : dolocloud - Start completed.
+2021-05-12 10:32:35.296  INFO 84019 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dolocloud'
+2021-05-12 10:32:35.362  INFO 84019 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-12 10:32:35.402  INFO 84019 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 10:32:35.432  INFO 84019 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-12 10:32:35.499  INFO 84019 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-12 10:32:35.574  INFO 84019 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-12 10:32:36.044  INFO 84019 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 10:32:36.049  INFO 84019 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 10:32:36.583  WARN 84019 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-12 10:32:36.764  INFO 84019 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ee94a7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@62af31e8, org.springframework.security.web.header.HeaderWriterFilter@478b8fc9, org.springframework.security.web.csrf.CsrfFilter@546de166, org.springframework.security.web.authentication.logout.LogoutFilter@dd72633, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@38d48b40, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@73573511, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@493f808f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77b22507, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c009800, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52fb566c, org.springframework.security.web.session.SessionManagementFilter@748e191c, org.springframework.security.web.access.ExceptionTranslationFilter@7bac36f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46ab3fb1]
+2021-05-12 10:32:36.805  INFO 84019 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-12 10:32:36.934  INFO 84019 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2021-05-12 10:32:36.944  INFO 84019 --- [restartedMain] c.silga.dolocloud.DoloCloudApplication   : Started DoloCloudApplication in 3.186 seconds (JVM running for 3.74)

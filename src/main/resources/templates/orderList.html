@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dolo Cloud</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+    <h1>Your dolo orders!</h1>
+    <img th:src="@{/images/DoloCloud.jpeg}"/>
+    <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+    <div class="grid">
+
+    </div>
+    <form method="POST" th:action="@{/logout}">
+        <input type="submit" value="Logout"/>
+    </form>
+</body>
+</html>
