@@ -1,0 +1,37 @@
+<cloud-title>Design your dolo masterpiece</cloud-title>
+
+<p>We provide a palette of fresh ingredients...you provide the inspiration! Select the
+  components that will come together as your crowning achievement of dolo workmanship.</p>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="ingredientsblock" style="text-align: center; width: 100%;">
+    <group-box title="Record your sugar">
+      <span *ngFor="let sugar of sugars">
+        <input type="checkbox" (change)="updateIngredients(sugar, $event)" name="ingredients" value="{{sugar.id}}"/>{{sugar.name}}<br/>
+      </span>
+    </group-box>
+    <group-box title="Pick your alcohols">
+      <span *ngFor="let alcohol of alcohols">
+        <input type="checkbox" (change)="updateIngredients(alcohol, $event)" name="ingredients" value="{{alcohol.id}}"/>{{alcohol.name}}<br/>
+      </span>
+    </group-box>
+    <group-box title="Choose your nonAlcohols">
+      <span *ngFor="let nonAlcohol of nonAlcohols">
+        <input type="checkbox" (change)="updateIngredients(nonAlcohol, $event)" name="ingredients" value="{{nonAlcohol.id}}"/>{{nonAlcohol.name}}<br/>
+      </span>
+    </group-box>
+    <group-box title="Vouch for your sours">
+      <span *ngFor="let sour of sours">
+        <input type="checkbox" (change)="updateIngredients(sour, $event)" name="ingredients" value="{{sour.id}}"/>{{sour.name}}<br/>
+      </span>
+    </group-box>
+    <group-box title="Name your dolo creation">
+      My dolo magnum opus shall be called<br/>
+      the "<input type="text" [(ngModel)]="model.name" name="name" class="nameField"/>"!
+    </group-box>
+  </div>
+
+  <div style="text-align:center; width:100%;">
+    <big-button label="Construct this dolo"></big-button>
+  </div>
+</form>

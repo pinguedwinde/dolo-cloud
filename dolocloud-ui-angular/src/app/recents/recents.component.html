@@ -1,0 +1,22 @@
+<cloud-title>Admire some recently created dolo masterpieces</cloud-title>
+
+<p>Even the greatest artists sometimes need to be inspired by the works of others.
+  Here are some of the most recently created dolos, designed by dolo artists just like you...</p>
+
+<div class="recentsblock">
+  <div class="doloblock" *ngFor="let dolo of recentDolos">
+      <div class="doloName"><span class="small">The</span><br/>"{{dolo.name}}"</div>
+      <div class="doloDesc">
+        <ul class="commalist">
+          <li *ngFor="let ingredient of dolo.ingredients | nonalcoholics">{{ingredient.name}}</li>
+        </ul>
+        <div *ngIf="(dolo.ingredients | alcoholics)?.length > 0">
+        <span>wrapped in</span><ul class="commalist">
+            <li *ngFor="let ingredient of dolo.ingredients | alcoholics">{{ingredient.name}}</li>
+        </ul>
+        </div>
+        <div *ngIf="(dolo.ingredients | alcoholics)?.length == 0">in a bowl</div>
+      </div>
+      <little-button label="Order this dolo"></little-button>
+  </div>
+</div>
