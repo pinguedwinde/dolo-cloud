@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -16,6 +17,7 @@ import java.util.List;
 @Table(name = "dolos")
 @AllArgsConstructor
 @NoArgsConstructor(access= AccessLevel.PUBLIC, force=true)
+@RestResource(rel="tacos", path = "tacos")
 public class Dolo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
