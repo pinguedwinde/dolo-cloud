@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "dolos")
 @AllArgsConstructor
 @NoArgsConstructor(access= AccessLevel.PUBLIC, force=true)
-@RestResource(rel="tacos", path = "tacos")
+@RestResource(rel="dolos", path = "dolos")
 public class Dolo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
