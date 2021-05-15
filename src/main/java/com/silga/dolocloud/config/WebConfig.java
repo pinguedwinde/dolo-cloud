@@ -18,13 +18,4 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("home");
         registry.addViewController("/login").setViewName("login");
     }
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
-    @Bean
-    public Traverson restTraverson() {
-        return new Traverson(URI.create("http://localhost:8080/api"), MediaTypes.HAL_JSON);
-    }
 }

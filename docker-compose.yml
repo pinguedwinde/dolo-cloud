@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  artemis:
+    image: vromero/activemq-artemis
+    hostname: artemis
+    volumes:
+      - artemis-data:/data/db
+    environment:
+      - ENABLE_JMX_EXPORTER = true
+      - ARTEMIS_MIN_MEMORY = 1512M
+      - ARTEMIS_MAX_MEMORY = 2000M
+      - ARTEMIS_USERNAME = doloweb
+      - ARTEMIS_PASSWORD = l3tm31n
+    ports:
+      - 61617:61617
+volumes:
+  artemis-data:
+    driver: local
