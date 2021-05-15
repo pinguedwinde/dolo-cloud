@@ -2,6 +2,7 @@ package com.silga.dolocloud.api.client;
 
 import com.silga.dolocloud.model.Ingredient;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.hateoas.client.Traverson;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -12,9 +13,11 @@ import java.util.Map;
 @Configuration
 public class RestClient {
     private final RestTemplate restTemplate;
+    private final Traverson traverson;
 
-    public RestClient(RestTemplate restTemplate) {
+    public RestClient(RestTemplate restTemplate, Traverson traverson) {
         this.restTemplate = restTemplate;
+        this.traverson = traverson;
     }
 
     public Ingredient getIngredientById(String ingredientId) {
@@ -37,5 +40,12 @@ public class RestClient {
     public Ingredient createIngredient(Ingredient ingredient) {
         return restTemplate.postForObject("http://localhost:8080/ingredients",
                 ingredient, Ingredient.class);
+    }
+
+    public Ingredient addIngredient(Ingredient ingredient){
+        String url = traverson.follow("ingredients")
+                            .asLink()
+                            .getHref();
+        return restTemplate.postForObject(url, ingredient, Ingredient.class);
     }
 }
