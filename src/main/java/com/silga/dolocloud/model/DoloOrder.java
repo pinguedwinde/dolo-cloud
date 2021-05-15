@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
@@ -20,6 +22,7 @@ import java.util.List;
 @Table(name = "dolo_orders")
 @AllArgsConstructor
 @NoArgsConstructor(access= AccessLevel.PUBLIC, force=true)
+@RestResource(rel = "orders", path = "orders")
 public class DoloOrder implements Serializable {
     private static final long serialVersionUID = 1L;
 
