@@ -2,20 +2,17 @@ package com.silga.dolocloud.jms;
 
 import com.silga.dolocloud.model.DoloOrder;
 import org.springframework.jms.core.JmsTemplate;
-import org.springframework.jms.core.MessagePostProcessor;
 import org.springframework.stereotype.Service;
 
 import javax.jms.Destination;
-import javax.jms.JMSException;
-import javax.jms.Message;
 
 
 @Service
-public class JmsOrderMessagingService implements OrderMessagingService {
+public class JmsOrderMessagingSender implements OrderMessagingSender {
     private final JmsTemplate jmsTemplate;
     private final Destination orderQueueDestination;
 
-    public JmsOrderMessagingService(JmsTemplate jmsTemplate, Destination orderQueueDestination) {
+    public JmsOrderMessagingSender(JmsTemplate jmsTemplate, Destination orderQueueDestination) {
         this.jmsTemplate = jmsTemplate;
         this.orderQueueDestination = orderQueueDestination;
     }
